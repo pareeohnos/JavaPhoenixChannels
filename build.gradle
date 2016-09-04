@@ -23,7 +23,7 @@ if(project.hasProperty('signing.keyId'))
 group = 'com.github.pareeohnos'
 version = '0.1.0'
 sourceCompatibility = '1.7'
-targetCompatibility = '1.6'
+targetCompatibility = '1.7'
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
