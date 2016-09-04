@@ -1,3 +1,12 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+  }
+}
+
 plugins {
   id "com.jfrog.bintray" version "1.6"
 }
@@ -6,10 +15,11 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'groovy'
+
 if(project.hasProperty('signing.keyId'))
   apply plugin: 'signing'
 
-group = 'org.phoenixframework.channels'
+group = 'com.github.pareeohnos'
 version = '0.1.0'
 sourceCompatibility = '1.7'
 targetCompatibility = '1.6'
@@ -40,6 +50,13 @@ task sourcesJar(type: Jar) {
 repositories {
   mavenCentral()
 }
+
+allprojects {
+  repositories {
+    jcenter()
+  }
+}
+
 
 artifacts {
   archives javadocJar, sourcesJar
